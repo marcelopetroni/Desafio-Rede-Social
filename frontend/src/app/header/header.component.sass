@@ -1,0 +1,75 @@
+.header-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 30px
+  background-color: #fff
+  font-family: "Amiko"
+
+.left-side
+  display: flex
+  align-items: center
+  margin-left: 5px
+  gap: 30px
+
+.center-side
+  display: flex
+  align-items: center
+  position: relative
+
+.search-input
+  display: flex
+  flex-direction: row
+  align-items: center
+  border-radius: 20px
+  padding: 8px 35px 8px 40px  
+  border: 1.4px solid #ccc
+  outline: none
+
+  &::placeholder
+    font-family: "Amiko"
+
+.search-icon
+  position: absolute
+  left: 10px 
+  pointer-events: none  
+  height: 20px
+  bottom: 8px
+
+.right-side
+  display: flex
+  align-items: center
+  margin-right: 20px
+  gap: 3px
+
+.write-button, .notification-button, .profile-button
+  display: flex
+  align-items: center
+  cursor: pointer
+  background: none
+  border: none
+  margin-left: 20px 
+
+.write-button
+  display: flex
+  align-items: center
+  span
+    font-size: 17px
+    color: #757575
+
+.write-button img
+  margin-right: 5px
+
+.profile-button
+  border: 1.6px solid #ccc
+  border-radius: 50%
+  padding: 5px
+
+.profile-button img
+  width: 20px
+  height: 20px
+
+.lineIcon
+  width: 100%
+  height: 0.4px
+  background-color: #e0e0e0

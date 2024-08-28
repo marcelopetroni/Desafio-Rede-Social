@@ -8,5 +8,4 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.sass'
 })
 export class HeaderComponent {
-
 }
