@@ -1,13 +1,22 @@
 <div class="feed-container">
     <div class="nav-plus-line">
         <div class="forYouFollowing-container">
-            <img src="../assets/feed-assets/plus.svg" alt="">
-            <div class="forYou">For you</div>
-            <div class="following">Following</div>
+            <button><img src="../assets/feed-assets/plus.svg" alt=""></button>
+            <button (click)="setActiveTab('forYou')" [class.active]="activeTab === 'forYou'">
+                <div class="forYou">For you</div>
+            </button>
+            <button (click)="setActiveTab('following')" [class.active]="activeTab === 'following'">
+                <div class="following">Following</div>
+            </button>
         </div>
         <div class="line2"></div>
+        <div class="line-wrapper">
+            <div class="active-line" [ngClass]="{'line-forYou': activeTab === 'forYou', 'line-following': activeTab === 'following'}"></div>
+        </div>
     </div>
     <div class="posts-container">
-        
-    </div>
+        <div *ngFor="let post of posts">
+          <app-post [post]="post"></app-post>  
+        </div>
+      </div>
 </div>

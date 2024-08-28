@@ -1,0 +1,30 @@
+<div class="post-container">
+    <div class="post-details">
+      <div class="pic-name-container">
+        <img [src]="post.profile_pic" alt="{{post.user_name}}'s profile picture" class="profile-pic">
+        <div class="post-username">{{ post.user_name }}</div>
+      </div>
+      <div class="post-title">{{ post.title }}</div>
+      <p>{{ post.description }}</p>
+      <div class="post-navigation">
+        <div class="post-metadados">
+            <span>{{ post.date }}</span>
+            <div class="likes-container">
+                <button><img src="../assets/feed-assets/applause.svg" alt="likes-applause-representation"></button>
+                <span>{{ post.likes }} likes</span>
+            </div>
+            <div class="comments-container">
+                <button><img src="../assets/feed-assets/comments.svg" alt="comments-balloon-representation"></button>
+                <span>{{ post.comments }} comments</span>
+            </div>
+          </div>
+          <div class="post-interections">
+            <button><img src="../assets/feed-assets/minus-outline.svg" alt="minus-icon"></button>
+            <button><img src="../assets/feed-assets/save-button.svg" alt="save-icon"></button>
+            <button><img src="../assets/feed-assets/three-dots.svg" alt="three-dots-icon"></button>
+          </div>
+      </div>
+    </div>
+    <img [src]="post.post_pic" alt="{{post.user_name}}'s post picture" class="post-pic">
+  </div>
+  
