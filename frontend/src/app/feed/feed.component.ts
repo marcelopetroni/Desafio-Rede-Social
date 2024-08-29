@@ -13,10 +13,10 @@ export class FeedComponent {
   activeTab: string = 'forYou';
 
   setActiveTab(tab: string) {
-    this.activeTab = tab; 
+    this.activeTab = tab;
   }
 
-  posts = [
+  allPosts = [
     {
       profile_pic: '../assets/feed-assets/user-images/amit_pic.jpg',
       user_name: 'Amit Das',
@@ -108,4 +108,14 @@ export class FeedComponent {
       post_pic: '../assets/feed-assets/post-images/user_feedback.svg' 
     },
   ];
+  
+   // Posts para "For You"
+  postsForYou = this.allPosts; 
+
+  // Posts para "Following"
+  postsFollowing = this.allPosts.slice(5, 10); // aqui botei os últimos 5 posts da for you p/ following
+
+  get posts() {
+    return this.activeTab === 'forYou' ? this.postsForYou : this.postsFollowing;
+  }
 }
