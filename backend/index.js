@@ -15,6 +15,10 @@ app.use(express.json());
 const userRouter = require('./routes/userRoutes');
 app.use('/users', userRouter);
 
+// post route
+const postRouter = require('./routes/postRoutes');
+app.use('/posts', postRouter);
+
 const PORT = 3000;
 
 app.listen(PORT, () => {
