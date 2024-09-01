@@ -12,7 +12,7 @@ export class PostService {
   postTitle$ = this.postTitle.asObservable();
   postContent$ = this.postContent.asObservable();
 
-  private apiUrl = 'http://localhost:3000/posts'; 
+  private apiUrl = 'https://desafio-rede-social-production.up.railway.app/posts'; 
 
   constructor(private http: HttpClient) {}
 

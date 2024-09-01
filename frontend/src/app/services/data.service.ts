@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = 'http://localhost:3000/users'; 
+  private apiUrl = 'https://desafio-rede-social-production.up.railway.app/users'; 
 
   constructor(private http: HttpClient) { }
 
