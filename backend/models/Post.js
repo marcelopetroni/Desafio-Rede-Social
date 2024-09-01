@@ -4,7 +4,7 @@ const sequelize = require('../config/database').sequelize;
 const Post = sequelize.define('Post', {
   userId: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
     references: {
       model: 'users',
       key: 'id',
@@ -18,17 +18,13 @@ const Post = sequelize.define('Post', {
     type: DataTypes.TEXT,
     allowNull: false,
   },
-  summary: {
-    type: DataTypes.STRING,
-    allowNull: true,
-  },
   totalLikes: {
     type: DataTypes.INTEGER,
     defaultValue: 0,
   },
   publishedAt: {
     type: DataTypes.DATE,
-    allowNull: false,
+    allowNull: true,
   },
 }, {
   tableName: 'posts',

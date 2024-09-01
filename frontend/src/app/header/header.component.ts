@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule, Event, NavigationEnd } from '@angular/router';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ import { Router, RouterModule, Event, NavigationEnd } from '@angular/router';
 export class HeaderComponent {
   isAddPostRoute: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private postService: PostService) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         this.isAddPostRoute = this.router.url === '/newPost';
@@ -22,5 +23,8 @@ export class HeaderComponent {
 
   navigateToFeed() {
     this.router.navigate(['/feed']);
+  }
+  publishPost() {
+    this.postService.publishPost();
   }
 }

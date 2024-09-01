@@ -14,7 +14,7 @@
       </button>
       <ng-container *ngIf="isAddPostRoute">
         <button class="cancel-button" (click)="navigateToFeed()">Cancel</button>
-        <button class="publish-button">Publish</button>
+        <button class="publish-button" (click)="publishPost()">Publish</button>
       </ng-container>
       <button class="notification-button">
         <img src="../assets/header-assets/cil_bell.svg" alt="Notification Icon">
