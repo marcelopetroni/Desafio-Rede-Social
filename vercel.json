@@ -1,17 +1,17 @@
 {
     "builds": [
       {
-        "src": "src/main.ts",
+        "src": "frontend/package.json",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "dist/frontend"
+          "distDir": "frontend/dist/frontend"
         }
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/index.html"
+        "dest": "/frontend/index.html"
       }
     ]
   }
